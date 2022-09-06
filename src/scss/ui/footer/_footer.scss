@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    padding: 3rem 0;
+
+    &__grid{
+        @include m.tablet { 
+            display: flex;
+            justify-content: space-between;
+            gap: 5rem;
+        }
+    }
+
+    &__copy{
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        border-top: .3rem solid v.$primario;
+
+        @include m.tablet { 
+            margin: 0;
+            border-top: none;
+        }
+    }
+
+    &__enlace{
+        color: v.$primario;
+        text-decoration: underline;
+    }
+}
